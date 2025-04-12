@@ -70,6 +70,7 @@ class LoginBottomSheetView: UIView {
         self.backgroundColor = .white
         self.layer.cornerRadius = Metrics.small
         
+        addSubview(handleArea)
         addSubview(titleLabel)
         addSubview(emailTextField)
         addSubview(passwordTextField)
@@ -83,8 +84,8 @@ class LoginBottomSheetView: UIView {
         NSLayoutConstraint.activate([
             handleArea.topAnchor.constraint(equalTo: self.topAnchor, constant: Metrics.small),
             handleArea.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            handleArea.widthAnchor.constraint(equalTo: self.widthAnchor),
-            handleArea.heightAnchor.constraint(equalTo: self.heightAnchor),
+            handleArea.widthAnchor.constraint(equalToConstant: 40),
+            handleArea.heightAnchor.constraint(equalToConstant: 6),
             
             titleLabel.topAnchor.constraint(equalTo: handleArea.bottomAnchor, constant: Metrics.medium),
             titleLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.medium),
