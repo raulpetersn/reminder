@@ -8,7 +8,7 @@
 import Firebase
 
 class LoginBottomSheetViewModel {
-    var succesResult: (() -> Void)?
+    var succesResult: ((String) -> Void)?
     
     func doAuth(userNameLogin: String, password: String ) {
         Auth.auth().signIn(withEmail: userNameLogin, password: password) { [weak self] authResult, error in
@@ -16,8 +16,7 @@ class LoginBottomSheetViewModel {
             if let error = error {
                 print("Autenticacao nao foi com sucesso \(error)")
             } else {
-                self?.succesResult?()
-                print("deu bom no login \(authResult)")
+                self?.succesResult?(userNameLogin)
             }
         }
     }
