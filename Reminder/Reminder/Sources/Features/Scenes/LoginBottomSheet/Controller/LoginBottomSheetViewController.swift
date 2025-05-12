@@ -10,7 +10,7 @@ import UIKit
 class LoginBottomSheetViewController: UIViewController {
 
     let contentView: LoginBottomSheetView
-    weak var flowDelegate:  LoginBottomSheetFlowDelegate?
+    weak var flowDelegate: LoginBottomSheetFlowDelegate?
     let viewModel = LoginBottomSheetViewModel()
     var mainNavigation: UINavigationController?
     var handleAreaHeight: CGFloat = 50.0

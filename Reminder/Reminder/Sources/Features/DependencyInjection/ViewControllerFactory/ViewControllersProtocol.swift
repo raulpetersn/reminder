@@ -8,5 +8,6 @@
 protocol ViewControllersProtocol: AnyObject {
     func makeSplashController(flowDelegate: SplashFlowDelegate) -> SplashViewController
     func makeLoginBottomSheetViewController(flowDelegate: LoginBottomSheetFlowDelegate) -> LoginBottomSheetViewController
+    func makeHomeViewController(flowDelegate: HomeFlowDelegate) -> HomeViewController
 }
  
