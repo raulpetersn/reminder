@@ -6,5 +6,6 @@
 //
 
 protocol HomeFlowDelegate: AnyObject {
-    func openHomeBegin()
+    func navigateToRecipes()
+    func logout()
 }

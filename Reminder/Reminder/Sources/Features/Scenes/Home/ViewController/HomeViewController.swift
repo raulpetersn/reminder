@@ -26,6 +26,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         setupBindView()
         setupConstrains()
+        setupNavigationBar()
     }
     
     private func setupBindView() {
@@ -34,5 +35,23 @@ class HomeViewController: UIViewController {
     
     private func setupConstrains() {
 //        setupContentViewToBounds(contentView: contentView)
+    }
+    
+    private func setupNavigationBar() {
+        let logoutButton = UIBarButtonItem(image: UIImage(named: "log-out-icon"),
+                                           style: .plain,
+                                           target: self,
+                                           action: #selector(didClickLogOut))
+        logoutButton.tintColor = Colors.redBase
+        navigationItem.rightBarButtonItem = logoutButton
+        navigationController?.navigationBar.isHidden = false
+        navigationItem.hidesBackButton = true
+    
+    }
+    
+    @objc
+    private func didClickLogOut() {
+        UserDefaultsManager.removeUser()
+        flowDelegate?.logout()
     }
 }

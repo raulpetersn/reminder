@@ -28,4 +28,9 @@ class UserDefaultsManager {
         return nil
     }
     
+    static func removeUser() {
+        UserDefaults.standard.removeObject(forKey: userKey)
+        UserDefaults.standard.synchronize()
+    }
+    
 }
