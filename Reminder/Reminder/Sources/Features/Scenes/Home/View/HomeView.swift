@@ -32,8 +32,7 @@ class HomeView: UIView {
         imageView.tintColor = .green
         imageView.clipsToBounds = true
         imageView.layer.cornerRadius = Metrics.regular
-        imageView.image = UIImage(named: "testeImg")
-        
+        imageView.image = UIImage(named: "profile-picture")
         return imageView
     }()
     
